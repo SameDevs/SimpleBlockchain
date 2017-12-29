@@ -1,4 +1,6 @@
 import os
+import hashlib
+import requests
 
 from flask import Flask
 
@@ -6,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello World!!!'
+    return hashlib.sha256('Hello World!!!'.encode()).hexdigest()
 
 
 if __name__ == "__main__":
