@@ -3,7 +3,7 @@ FROM python:alpine3.6
 ADD requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 
-ADD . /code
+ADD ./src /code
 WORKDIR /code
 
 # Define exposed variables
