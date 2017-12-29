@@ -11,3 +11,6 @@ class Block:
   def hash_block(self):
     block_description = str(self.index) + str(self.timestamp) + str(self.data) + str(self.previous_hash)
     return hashlib.sha256(block_description.encode()).hexdigest()
+
+  def toDict(self):
+    return {"index": str(self.index), "timestamp": str(self.timestamp), "data": str(self.data), "hash": self.hash}
