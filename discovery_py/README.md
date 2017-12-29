@@ -8,6 +8,7 @@ Returns a list of other registered nodes
 ## POST /nodes/register
 Register a new node and get a list of other registered nodes
 
+Both endpoints requires a parameter `port` to specify the port on which the node is listening on
 
 # Hooks
 Each partecipating node should expose the following hooks
