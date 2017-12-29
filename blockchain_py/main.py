@@ -10,6 +10,6 @@ def hello():
 
 
 if __name__ == "__main__":
-    SERVICE_PORT = int(os.getenv("PORT"))
+    SERVICE_PORT = int(os.getenv("PORT", 5000))
     DEBUG_MODE = os.getenv("DEBUG", False)
     app.run(host="0.0.0.0", port=SERVICE_PORT, debug=DEBUG_MODE)
