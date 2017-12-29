@@ -12,3 +12,15 @@ services:
       - "3000:3000"
     volumes:
       - ./blockchain_py/src:/code
+
+  discovery:
+    build:
+      context: ./discovery_py
+      dockerfile: ./Dockerfile
+    environment:
+      - PORT=5000
+      - DEBUG=1
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./discovery_py/src:/code
